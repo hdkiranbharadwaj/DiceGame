@@ -1,6 +1,3 @@
-
-
-
 'use strict';
 //Selecting elements priorly
 const player0El = document.querySelector('.player--0');
@@ -44,8 +41,7 @@ function showGameInstructions() {
 
   alert(instructions);
 }
-
-
+showGameInstructions();
 
 const init = function () {
   document.getElementById(`score--0`).textContent = 0;
@@ -91,6 +87,12 @@ btnRoll.addEventListener('click', function () {
     }
   }
 });
+const otherwinner = function () {
+
+document.querySelector(`.player--${activePlayer}`).classList.add('player--winner');
+document.querySelector(`.player--${activePlayer}`).classList.remove('player--active');
+diceEl.classList.add('hidden');
+}
 btnHold.addEventListener('click', function () {
   if (playing) {
     scores[activePlayer] += currentScore;
@@ -107,18 +109,11 @@ btnHold.addEventListener('click', function () {
       diceEl.classList.add('hidden');
     }
 else if (scores[activePlayer] > 20) {
-       
       playing = false;
-
-switchPlayer();
-      document
-        .querySelector(`.player--${activePlayer}`)
-        .classList.add('player--winner');
-      document
-        .querySelector(`.player--${activePlayer}`)
-        .classList.remove('player--active');
-      diceEl.classList.add('hidden');
-    } else {
+      switchPlayer();
+      otherwinner();
+}
+       else {
       switchPlayer();
     }
   }
