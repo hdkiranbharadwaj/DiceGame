@@ -1,3 +1,6 @@
+
+
+
 'use strict';
 //Selecting elements priorly
 const player0El = document.querySelector('.player--0');
@@ -20,6 +23,30 @@ let currentScore = 0;
 let activePlayer = 0;
 const scores = [0, 0];
 let playing = true;
+
+
+
+// Function to display the game instructions in an alert dialog
+function showGameInstructions() {
+  const instructions = `Game Rules:
+  1. Two players take turns rolling a dice.
+  2. The goal is to be the first player to reach a total score of 20 points.
+  3. On your turn, roll the dice by tapping on it.
+  4. If you roll a one, you lose all the points accumulated during that turn, and your turn ends immediately. The control switches to the other player.
+  5. If you roll any other number, you have two options:
+     a. Roll again by tapping on the dice to add the rolled number to your current turn's score.
+     b. Hold by tapping the "Hold" button. This adds the points from your current turn to your total score, and it becomes the other player's turn.
+  6. Players can keep rolling until they decide to hold or roll a one.
+  7. The accumulated points from each turn get added to your total score only if you choose to hold.
+  8. The first player to reach or exceed a total score of 20 wins the game.
+
+  Enjoy the game and have fun!`;
+
+  alert(instructions);
+}
+
+// Call the function to show the game instructions when needed
+showGameInstructions();
 
 const init = function () {
   document.getElementById(`score--0`).textContent = 0;
