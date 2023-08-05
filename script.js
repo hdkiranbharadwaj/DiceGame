@@ -25,19 +25,23 @@ let playing = true;
 
 // Function to display the game instructions in an alert dialog
 function showGameInstructions() {
-  const instructions = `Game Rules:
-  1. Two players take turns rolling a dice.
-  2. The goal is to be the first player to reach a total score of 20 exact points.
-  3. On your turn, roll the dice by tapping on it.
-  4. If you roll a one, you lose all the points accumulated during that turn, and your turn ends immediately. The control switches to the other player.
-  5. If you roll any other number, you have two options:
-     a. Roll again by tapping on the dice to add the rolled number to your current turn's score.
-     b. Hold by tapping the "Hold" button. This adds the points from your current turn to your total score, and it becomes the other player's turn.
-  6. Players can keep rolling until they decide to hold or roll a one.
-  7. The accumulated points from each turn get added to your total score only if you choose to hold.
-  8. The first player to reach a total score of 20 wins the game.
+  const instructions = `Welcome to the Dice Game!
 
-  Enjoy the game and have fun!`;
+  How to Play:
+  - This intriguing game involves two players who take turns rolling a dice.
+  - The ultimate objective is for a player to achieve a precise total score of 20 points.
+  - During your turn, gracefully tap the dice to initiate the roll.
+  - In the event of rolling a one, alas, all accumulated points during that turn shall be relinquished, and the honor of the next turn shall be bestowed upon the opposing player.
+  - Upon rolling any other number, a conundrum arises, presenting you with two choices:
+    a. Embrace the fortune's favor and roll again, adding the newly rolled number to your current turn's score.
+    b. Wisely opt to Hold, permitting the accumulation of points from your present turn to be gracefully added to your overall score, signifying the commencement of the other player's turn.
+  - The pursuit of points can endure, as players maintain the liberty to continue rolling until they choose to Hold or encounter the fateful roll of a one.
+  - Proceed with care, for only when you declare to Hold, the bounty of points shall be credited to your total score.
+  - A momentous decree awaits those whose total score crosses the threshold of 20; they shall be proclaimed the unfortunate loser, granting the title of victor to the opposing player.
+
+  Embrace the elegance of this game and savor the thrill of strategy and chance in each turn!
+
+  Best wishes and enjoy the game!`;
 
   alert(instructions);
 }
