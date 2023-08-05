@@ -30,7 +30,7 @@ let playing = true;
 function showGameInstructions() {
   const instructions = `Game Rules:
   1. Two players take turns rolling a dice.
-  2. The goal is to be the first player to reach a total score of 20 points.
+  2. The goal is to be the first player to reach a total score of 20 exact points.
   3. On your turn, roll the dice by tapping on it.
   4. If you roll a one, you lose all the points accumulated during that turn, and your turn ends immediately. The control switches to the other player.
   5. If you roll any other number, you have two options:
@@ -38,7 +38,7 @@ function showGameInstructions() {
      b. Hold by tapping the "Hold" button. This adds the points from your current turn to your total score, and it becomes the other player's turn.
   6. Players can keep rolling until they decide to hold or roll a one.
   7. The accumulated points from each turn get added to your total score only if you choose to hold.
-  8. The first player to reach or exceed a total score of 20 wins the game.
+  8. The first player to reach a total score of 20 wins the game.
 
   Enjoy the game and have fun!`;
 
