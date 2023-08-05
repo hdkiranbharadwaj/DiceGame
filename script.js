@@ -51,6 +51,11 @@ showGameInstructions();
   document
     .querySelector(`.player--${activePlayer}`)
     .classList.remove('player--winner');
+    
+let notactive=activePlayer==1?0:1;
+    document
+    .querySelector(`.player--${notactive}`)
+    .classList.remove('player--loser');
   document
     .querySelector(`.player--${activePlayer}`)
     .classList.remove('player--active');
@@ -90,6 +95,8 @@ btnRoll.addEventListener('click', function () {
 const otherwinner = function () {
 
 document.querySelector(`.player--${activePlayer}`).classList.add('player--winner');
+let notactive=activePlayer==1?0:1;
+document.querySelector(`.player--${notactive}`).classList.add('player--loser');
 document.querySelector(`.player--${activePlayer}`).classList.remove('player--active');
 diceEl.classList.add('hidden');
 }
@@ -106,6 +113,8 @@ btnHold.addEventListener('click', function () {
       document
         .querySelector(`.player--${activePlayer}`)
         .classList.remove('player--active');
+let notactive=activePlayer==1?0:1;
+document.querySelector(`.player--${notactive}`).classList.add('player--loser');
       diceEl.classList.add('hidden');
     }
 else if (scores[activePlayer] > 20) {
