@@ -45,12 +45,13 @@ function showGameInstructions() {
   alert(instructions);
 }
 
-// Call the function to show the game instructions when needed
-showGameInstructions();
+
 
 const init = function () {
   document.getElementById(`score--0`).textContent = 0;
   document.getElementById(`score--1`).textContent = 0;
+
+showGameInstructions();
   document
     .querySelector(`.player--${activePlayer}`)
     .classList.remove('player--winner');
@@ -96,6 +97,17 @@ btnHold.addEventListener('click', function () {
     document.getElementById(`score--${activePlayer}`).textContent =
       scores[activePlayer];
     if (scores[activePlayer] == 20) {
+      playing = false;
+      document
+        .querySelector(`.player--${activePlayer}`)
+        .classList.add('player--winner');
+      document
+        .querySelector(`.player--${activePlayer}`)
+        .classList.remove('player--active');
+      diceEl.classList.add('hidden');
+    }
+else if (scores[activePlayer] > 20) {
+       switchPlayer();
       playing = false;
       document
         .querySelector(`.player--${activePlayer}`)
